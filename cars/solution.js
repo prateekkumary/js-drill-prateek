@@ -92,3 +92,24 @@ function getCarYears() {
 export{
     carOlder2000
 }
+
+function arrayOfBmwAudi(){
+    const bmwAndAudiCars = [];
+  
+    
+    for (let i = 0; i < inventory.length; i++) {
+      const car = inventory[i];
+      
+
+      if (car.car_make === "BMW" || car.car_make === "Audi") {
+        bmwAndAudiCars.push(car);
+      }
+    }
+     JSON.stringify(bmwAndAudiCars);
+     console.log(bmwAndAudiCars)
+    
+     return bmwAndAudiCars;
+}
+export{
+    arrayOfBmwAudi
+}

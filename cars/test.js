@@ -4,6 +4,7 @@ import {infForLastCar} from "./solution.js";
 import { sortCarModels } from "./solution.js";
 import { allCarYear } from "./solution.js";
 import { carOlder2000 } from "./solution.js";
+import { arrayOfBmwAudi } from "./solution.js";
 
 
 
@@ -51,3 +52,10 @@ const testCarOlder2000=()=>{
     console.log(carOlder2000(2000));
 }
 testCarOlder2000();
+
+
+
+const testOnlyAudiBmw=()=>{
+    console.log(arrayOfBmwAudi);
+}
+arrayOfBmwAudi();
