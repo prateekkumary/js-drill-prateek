@@ -1,7 +1,7 @@
 import { userPlayingVideoGame } from "./solution.js";
 import { users } from "./users.js";
 import { allUsersInGermany } from "./solution.js";
-//import { allusersWithMaster } from "./solution.js";
+import { allusersWithMaster } from "./solution.js";
 
 const testUserPlayingVideoGame=()=>{
     console.log(userPlayingVideoGame(users));
@@ -26,5 +26,5 @@ const testAllusersWithMaster =()=>{
 
 testUserPlayingVideoGame();
 testAllUsersInGermany();
-//testAllusersWithMaster();
+testAllusersWithMaster();
 //testGruopOfProgramming();

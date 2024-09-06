@@ -37,8 +37,20 @@ const allUsersInGermany=()=>{
     return result;
 }
 
+const allusersWithMaster = () => {
+    const result = [];
+    for (const user in users) {
+        let qualification = users[user].qualification;
+        if (qualification.includes("Masters")) {
+            result.push(user);
+        }
+    }
+    return result;
+};
+
+
 
 
 export{
-    userPlayingVideoGame,allUsersInGermany,
+    userPlayingVideoGame,allUsersInGermany,allusersWithMaster
 }
