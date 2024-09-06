@@ -58,3 +58,37 @@ function allCarYear(){
 export{
     allCarYear
 }
+
+//problem 5
+
+function getCarYears() {
+    const carYears = [];
+    
+    for (let i = 0; i < inventory.length; i++) {
+      carYears.push(inventory[i].car_year);
+    }
+    
+    return carYears;
+  }
+  
+  function carOlder2000(yearThreshold) {
+    
+    const carYears = getCarYears();
+    
+    const olderCars = [];
+    
+    for (let i = 0; i < carYears.length; i++) {
+      if (carYears[i] < yearThreshold) {
+        olderCars.push(carYears[i]);
+      }
+    }
+    
+
+    console.log(olderCars.length);
+    
+    // Return the array of older cars
+    return olderCars;
+}
+export{
+    carOlder2000
+}
