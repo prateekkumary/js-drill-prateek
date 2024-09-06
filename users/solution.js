@@ -27,8 +27,18 @@ const userPlayingVideoGame =() =>{
     
 };
 
+const allUsersInGermany=()=>{
+    const result = [];
+    for (const user in users) {
+        if (users[user].nationality === "Germany") {
+            result.push(user);
+        }
+    }
+    return result;
+}
+
 
 
 export{
-    userPlayingVideoGame
+    userPlayingVideoGame,allUsersInGermany,
 }
