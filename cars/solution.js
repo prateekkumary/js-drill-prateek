@@ -14,3 +14,14 @@ export {
     findCarById
 }
 
+function infForLastCar() {
+    if (inventory.length===0){
+       return "Inventry is Empty"; 
+    }
+    const lastCar=inventory[inventory.length-1];
+    return (`Last car is a ${lastCar.car_make} ${lastCar.car_model}`);
+    
+}
+export{
+    infForLastCar
+}
