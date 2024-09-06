@@ -5,14 +5,29 @@ import { users } from "./users.js";
 
 
 
-const userPlayingVideoGame =(data) =>{
+const userPlayingVideoGame =() =>{
     
-    for (const user in data){
-        if (data[user].interests && data[user].interests.includes("Playing Video Games")){
-            return (`${user}:${data[user].interests}`);
+        const result = [];
+        const videoGamesRegex = /Playing Video Games/i; 
+    
+        for (const user in users) {
+            if (users[user].interests) {
+                let interests = users[user].interests;
+                let i = 0;
+                while (i < interests.length) {
+                    if (videoGamesRegex.test(interests[i])) {
+                        result[result.length] = user; 
+                        break; 
+                    }
+                    i++;
+                }
+            }
         }
-    }
+        return result;
+    
 };
+
+
 
 export{
     userPlayingVideoGame
