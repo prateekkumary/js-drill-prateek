@@ -2,6 +2,7 @@ import { userPlayingVideoGame } from "./solution.js";
 import { users } from "./users.js";
 import { allUsersInGermany } from "./solution.js";
 import { allusersWithMaster } from "./solution.js";
+import { gruopOfProgramming } from "./solution.js";
 
 const testUserPlayingVideoGame=()=>{
     console.log(userPlayingVideoGame(users));
@@ -20,11 +21,11 @@ const testAllusersWithMaster =()=>{
 
 //Group users based on their Programming language mentioned in their designation.
 
-// const testGruopOfProgramming=()=>{
-//     console.log(gruopOfProgramming(users));
-// }
+const testGruopOfProgramming=()=>{
+    console.log(gruopOfProgramming(users));
+}
 
 testUserPlayingVideoGame();
 testAllUsersInGermany();
 testAllusersWithMaster();
-//testGruopOfProgramming();
+testGruopOfProgramming();

@@ -49,8 +49,27 @@ const allusersWithMaster = () => {
 };
 
 
+const gruopOfProgramming=()=>{
+    let userGolang = [];
+    let userJavascript = [];
+    let userPython = [];
+    for (let i in users) {
+        const desgination = users[i].desgination;
+        if(desgination.includes("Golang")){
+            userGolang.push(i);
+        }
+        else if(desgination.includes("Javascript")){
+            userJavascript.push(i);
+        }
+        else if(desgination.includes("Python")){
+            userPython.push(i);
+        }
+    }
 
+    return [userGolang , userJavascript , userPython];
+
+};
 
 export{
-    userPlayingVideoGame,allUsersInGermany,allusersWithMaster
+    userPlayingVideoGame,allUsersInGermany,allusersWithMaster,gruopOfProgramming
 }
