@@ -1,6 +1,7 @@
 import { findCarById } from "./solution.js";
 import { inventory } from "./cars.js";
 import {infForLastCar} from "./solution.js";
+import { sortCarModels } from "./solution.js";
 
 
 
@@ -25,3 +26,12 @@ const testInfoLastCar=()=>{
 }
 
 testInfoLastCar();
+
+// ==== Problem #3 ====
+// The marketing team wants the car models listed alphabetically on the website. Execute a function to Sort all the car model names into alphabetical order and log the results in the console as it was returned.
+
+
+const testSortCarModels=()=>{
+    console.log(sortCarModels());
+}
+testSortCarModels();

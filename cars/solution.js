@@ -25,3 +25,19 @@ function infForLastCar() {
 export{
     infForLastCar
 }
+
+function sortCarModels() {
+    const carModels = [];
+    
+    for (let i = 0; i < inventory.length; i++) {
+      carModels.push(inventory[i].car_model);
+    }
+    
+
+    carModels.sort();
+
+    return carModels;
+}
+export{
+    sortCarModels
+}
