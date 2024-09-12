@@ -2,7 +2,7 @@
 
 import { items } from "./arrays.js";
 
-import { each ,map,reduce,find} from "./solution.js";
+import { each ,map,reduce,find,filter} from "./solution.js";
 
 
 // #1
@@ -20,6 +20,14 @@ console.log(reduce(items, (acc, element) => {
     return acc *= element;
 }, 1));
 
+
+//#4
 console.log(find(items,(element)=>{
     return element%2===0;
+}))
+
+//#5
+
+console.log(filter(items,(element)=>{
+    return element%2!==0
 }))
