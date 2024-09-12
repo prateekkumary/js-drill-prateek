@@ -52,7 +52,21 @@ function map(elements, cb) {
     // Return the accumulated result
     return acc;
   }
+
+  function find(elements, cb) {
+    // Do NOT use .includes, to complete this function.
+    // Look through each value in `elements` and pass each element to `cb`.
+    // If `cb` returns `true` then return that element.
+    // Return `undefined` if no elements pass the truth test.
+
+    for(let index=0;index<elements.length;index++){
+        if(cb(elements[index])){
+            return elements[index];
+        }
+    }
+    return undefined;
+  }
   
   
 
-  export{each,map,reduce}
+  export{each,map,reduce,find}
