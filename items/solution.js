@@ -84,4 +84,32 @@ function map(elements, cb) {
   }
   
 
-  export{each,map,reduce,find,filter}
+
+  const nestedArray = [1, [2], [[3]], [[[4]]]]; // use this to test 'flatten'
+
+function flatten(arr) {
+  // Flattens a nested array (the nesting can be to any depth).
+  // Hint: You can solve this using recursion.
+  // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+
+  const result=[];
+  function flatHelper(elements){
+
+  for(let index=0;index<elements.length;index++){
+      const element=elements[index];
+      if(Array.isArray(element)){
+        flatHelper(element);
+      }
+      else{
+        result.push(element);
+      }
+    
+    } 
+}
+  flatHelper(arr)
+  return result;
+
+  
+}
+
+  export{each,map,reduce,find,filter,flatten}

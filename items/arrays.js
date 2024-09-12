@@ -54,4 +54,4 @@ function flatten(elements) {
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
 }
 
-export{items};
+export{items,nestedArray};
