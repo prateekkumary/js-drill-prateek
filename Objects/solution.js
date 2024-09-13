@@ -28,4 +28,13 @@ function mapObject(obj, cb) {
    return result;
   }
 
-export {keys,values,mapObject}
+
+  function pairs(obj) {
+    const result=[];
+    for(let key in obj){
+      if(obj.hasOwnProperty(key));
+      result.push([key,obj[key]]);
+    }
+    return result;
+  }
+export {keys,values,mapObject,pairs}
