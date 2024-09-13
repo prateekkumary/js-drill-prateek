@@ -18,4 +18,18 @@ function counterFactory() {
     return obj;
   }
 
-  export{counterFactory,}
+  function limitFunctionCallCount(cb, n) {
+    let count=0;
+        return function(...arr){
+            if(count<n){
+                count+=1;
+                return cb(...arr);
+            }
+            else{
+                return null;
+
+            }
+        }
+  }
+
+  export{counterFactory,limitFunctionCallCount}
