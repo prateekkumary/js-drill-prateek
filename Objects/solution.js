@@ -11,5 +11,13 @@ function keys(obj) {
 }
 
 
+function values(obj) {
+    const arr=[];
+    for(let key in obj){
+        arr.push(obj[key]);
+    }
+    return arr;
+}
 
-export {keys,}
+
+export {keys,values}
