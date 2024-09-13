@@ -47,4 +47,14 @@ function mapObject(obj, cb) {
    }
    return result;
   }
-export {keys,values,mapObject,pairs,invert}
+
+
+  function defaults(obj, defaultProps) {
+    for(let key in defaultProps){
+        if(obj[key]==='undefind'){
+            obj[key]=defaultProps[key];
+        }
+    }
+    return obj;
+  }
+export {keys,values,mapObject,pairs,invert,defaults}
