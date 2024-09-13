@@ -19,5 +19,13 @@ function values(obj) {
     return arr;
 }
 
+function mapObject(obj, cb) {
+    const result={};
+   for(let key in obj){
+    result[key]=cb(obj[key]);
 
-export {keys,values}
+   }
+   return result;
+  }
+
+export {keys,values,mapObject}
