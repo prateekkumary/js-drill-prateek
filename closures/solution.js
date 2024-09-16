@@ -32,4 +32,16 @@ function counterFactory() {
         }
   }
 
-  export{counterFactory,limitFunctionCallCount}
+  function cacheFunction(cb) {
+    const cache = {};
+    return (key) => {
+        if(cache[key]){        // "cache.hasOwnProperty(key)"
+            return cache[key];
+        }
+        let result = cb(key);
+        cache[key] = result;
+        return result;
+    };
+}
+
+  export{counterFactory,limitFunctionCallCount,cacheFunction}
